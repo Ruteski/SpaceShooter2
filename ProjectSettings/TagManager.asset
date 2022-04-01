@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tiros
+    uniqueID: 2543032931
+    locked: 0
+  - name: Inimigo
+    uniqueID: 1734806529
+    locked: 0
+  - name: Player
+    uniqueID: 3800373079
+    locked: 0
