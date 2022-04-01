@@ -19,9 +19,12 @@ public class PlayerController : MonoBehaviour
         //pegando o input horizontal
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector2 minhaVelocidade = new Vector2(horizontal, vertical) * velocidade;
+        Vector2 minhaVelocidade = new Vector2(horizontal, vertical);
+
+        //normalizando para que a velocidade diagonal seja a msm da velocidade nos eixos
+        minhaVelocidade.Normalize();
 
         //passando a minha velocidade para o rb
-        meuRB.velocity = minhaVelocidade;
+        meuRB.velocity = minhaVelocidade * velocidade;
     }
 }
