@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 884827455207613062}
   - component: {fileID: 884827455207613061}
   - component: {fileID: 884827455207613060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: inimigo_1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 884827455370685851}
   - component: {fileID: 884827455370685849}
   - component: {fileID: 884827455370685850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Inimigo
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: -3
+  goTiro: {fileID: 8991771201279983115, guid: a8231949dd863a747ae4020c729edf31, type: 3}
 --- !u!95 &884827455370685849
 Animator:
   serializedVersion: 3
