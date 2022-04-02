@@ -6,6 +6,7 @@ public class InimigoController : MonoBehaviour
 {
     private Rigidbody2D meuRB;
     [SerializeField] private float velocidade = -3f;
+    private float esperaTiro = 1f;
 
     //meu tiro
     [SerializeField] private GameObject goTiro;
@@ -20,7 +21,14 @@ public class InimigoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //instanciando o tiro
-        Instantiate(goTiro, transform.position, transform.rotation);
+        //diminui tempo de espera para atirar
+        esperaTiro -= Time.deltaTime;   
+
+        if (esperaTiro < 0f) {
+            //instanciando o tiro
+            Instantiate(goTiro, transform.position, transform.rotation);
+            esperaTiro = 1f;
+        }    
+
     }
 }
