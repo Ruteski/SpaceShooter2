@@ -13,13 +13,15 @@ public class TiroController : MonoBehaviour
         meuRB = GetComponent<Rigidbody2D>();
 
         meuRB.velocity = new Vector2(0f, velocidade);
-
-        Destroy(meuRB, 2f);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Destroy(gameObject);
     }
 }

@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        meuRB = GetComponent<Rigidbody2D>();    
+        meuRB = GetComponent<Rigidbody2D>();  
     }
 
     // Update is called once per frame
