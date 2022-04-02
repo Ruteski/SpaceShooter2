@@ -11,6 +11,9 @@ public class InimigoController : MonoBehaviour
     //meu tiro
     [SerializeField] private GameObject goTiro;
 
+    //pegando o transforme da posicao do meu tiro
+    [SerializeField] private Transform posTiro;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +37,7 @@ public class InimigoController : MonoBehaviour
 
             if (esperaTiro < 0f) {
                 //instanciando o tiro
-                Instantiate(goTiro, transform.position, transform.rotation);
+                Instantiate(goTiro, posTiro.position, transform.rotation);
                 esperaTiro = Random.Range(1.5f, 2f);
             }
         }
