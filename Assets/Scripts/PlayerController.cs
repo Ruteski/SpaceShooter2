@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
             Vector2 posicaoTiro;
             posicaoTiro = transform.position;
             posicaoTiro.x = transform.position.x + 0.64f;
-            Instantiate(goTiro, posicaoTiro, transform.rotation);
+            Instantiate(goTiro, transform.position, transform.rotation);
         }
     }
 }
