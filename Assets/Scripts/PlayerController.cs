@@ -28,11 +28,7 @@ public class PlayerController : MonoBehaviour
         //passando a minha velocidade para o rb
         meuRB.velocity = minhaVelocidade * velocidade;
 
-        if (Input.GetButtonDown("Fire1")) {
-            Vector2 posicaoTiro;
-            posicaoTiro = transform.position;
-            posicaoTiro.x = transform.position.x + 0.64f;
-            Instantiate(goTiro, transform.position, transform.rotation);
-        }
+        if (Input.GetButtonDown("Fire1")) Instantiate(goTiro, transform.position, transform.rotation);
+        
     }
 }
