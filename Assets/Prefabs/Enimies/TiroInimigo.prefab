@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 8991771201279983112}
   - component: {fileID: 8991771201279983118}
   - component: {fileID: 1296002994}
+  - component: {fileID: 5892852276028805490}
   m_Layer: 9
   m_Name: TiroInimigo
   m_TagString: Untagged
@@ -166,3 +167,22 @@ CircleCollider2D:
   m_Offset: {x: -0.003730774, y: 0}
   serializedVersion: 2
   m_Radius: 0.15306187
+--- !u!95 &5892852276028805490
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8991771201279983115}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c69cb8c9a4fe827479df761e66f9d6ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
