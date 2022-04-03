@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float velocidade = 5f;
     [SerializeField] private GameObject goTiro;
     [SerializeField] private Transform posTiro;
+    [SerializeField] private int vida = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +32,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1")) Instantiate(goTiro, posTiro.position, transform.rotation);
         
+    }
+
+    public void PerdeVida(int dano) {
+        vida -= dano;
     }
 }

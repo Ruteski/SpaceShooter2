@@ -26,6 +26,10 @@ public class TiroController : MonoBehaviour
             collision.GetComponent<InimigoController>().PerdeVida(1);
         }
 
+        if (collision.CompareTag("Jogador")) {
+            collision.GetComponent<PlayerController>().PerdeVida(1);
+        }
+
         Destroy(gameObject);
     }
 }
