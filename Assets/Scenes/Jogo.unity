@@ -197,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6798412688176801938, guid: 8f0901ffc7c40ea4eaadc945049700e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.07
+      value: 6.7
       objectReference: {fileID: 0}
     - target: {fileID: 6798412688176801938, guid: 8f0901ffc7c40ea4eaadc945049700e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -292,8 +292,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inimigo
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 884827455370685849, guid: c834ad7ef523095439ca22946216c2c1, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c834ad7ef523095439ca22946216c2c1, type: 3}
 --- !u!1001 &4854751602745116923
 PrefabInstance:
