@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 761533422}
   m_Layer: 6
   m_Name: Inimigo
-  m_TagString: Untagged
+  m_TagString: Inimigo01
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   velocidade: -3
   goTiro: {fileID: 8991771201279983115, guid: a8231949dd863a747ae4020c729edf31, type: 3}
   posTiro: {fileID: 692340727}
+  vida: 1
 --- !u!95 &884827455370685849
 Animator:
   serializedVersion: 3

@@ -22,8 +22,9 @@ public class TiroController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-
-        collision.GetComponent<InimigoController>().PerdeVida(1);
+        if (collision.CompareTag("Inimigo01")) {
+            collision.GetComponent<InimigoController>().PerdeVida(1);
+        }
 
         Destroy(gameObject);
     }
