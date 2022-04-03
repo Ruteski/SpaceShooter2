@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject goTiro;
     [SerializeField] private Transform posTiro;
     [SerializeField] private int vida = 3;
+    [SerializeField] private GameObject goExplosao;
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +37,10 @@ public class PlayerController : MonoBehaviour
 
     public void PerdeVida(int dano) {
         vida -= dano;
+
+        if (vida <= 0) { 
+            Destroy(gameObject);
+            Instantiate(goExplosao, transform.position, transform.rotation);
+        }
     }
 }
