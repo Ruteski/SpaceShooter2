@@ -47,5 +47,9 @@ public class InimigoController : MonoBehaviour
 
     public void PerdeVida(int dano) {
         vida -= dano;
+
+        if (vida <= 0) { 
+            Destroy(gameObject);    
+        }
     }
 }
