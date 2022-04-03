@@ -14,6 +14,8 @@ public class InimigoController : MonoBehaviour
     //pegando o transforme da posicao do meu tiro
     [SerializeField] private Transform posTiro;
 
+    [SerializeField] private int vida = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,9 @@ public class InimigoController : MonoBehaviour
                 esperaTiro = Random.Range(1.5f, 2f);
             }
         }
-            
+    }
 
+    public void PerdeVida(int dano) {
+        vida -= dano;
     }
 }
