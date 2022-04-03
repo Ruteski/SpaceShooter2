@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: -5
+  impactoTiro: {fileID: 591305865342276756, guid: d06f37305cbdc744eb29f70bc1804008, type: 3}
 --- !u!58 &1296002994
 CircleCollider2D:
   m_ObjectHideFlags: 0
