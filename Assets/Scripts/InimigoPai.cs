@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class InimigoPai : MonoBehaviour
 {
-    [SerializeField] private float velocidade;
-    [SerializeField] private int vida;
-    [SerializeField] private GameObject goExplosao;
+    [SerializeField] protected float velocidade;
+    [SerializeField] protected int vida;
+    [SerializeField] protected GameObject goExplosao;
 
     // Start is called before the first frame update
     void Start()
