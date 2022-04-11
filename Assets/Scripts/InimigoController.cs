@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InimigoController : MonoBehaviour
+public class InimigoController : InimigoPai
 {
     private Rigidbody2D meuRB;
-    [SerializeField] private float velocidade = -3f;
     private float esperaTiro = 1f;
 
     //meu tiro
@@ -13,9 +12,6 @@ public class InimigoController : MonoBehaviour
 
     //pegando o transforme da posicao do meu tiro
     [SerializeField] private Transform posTiro;
-
-    [SerializeField] private int vida = 1;
-    [SerializeField] private GameObject goExplosao;
 
     // Start is called before the first frame update
     void Start()
@@ -43,15 +39,6 @@ public class InimigoController : MonoBehaviour
                 Instantiate(goTiro, posTiro.position, transform.rotation);
                 esperaTiro = Random.Range(1.5f, 2f);
             }
-        }
-    }
-
-    public void PerdeVida(int dano) {
-        vida -= dano;
-
-        if (vida <= 0) { 
-            Destroy(gameObject);
-            Instantiate(goExplosao, transform.position, transform.rotation);
         }
     }
 }
