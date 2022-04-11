@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a1992c892c72942a3bf17c4ee8519a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 6
-  impactoTiro: {fileID: 0}
+  velocidade: -6
+  impactoTiro: {fileID: 591305865342276756, guid: d06f37305cbdc744eb29f70bc1804008, type: 3}
 --- !u!95 &611590862295325522
 Animator:
   serializedVersion: 3
@@ -150,7 +150,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
