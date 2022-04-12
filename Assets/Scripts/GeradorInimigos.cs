@@ -29,6 +29,7 @@ public class GeradorInimigos : MonoBehaviour
         }
 
         if (esperaInimigo <= 0f) {
+            Instantiate(inimigos[0], transform.position, transform.rotation);
             esperaInimigo = tempoEspera;
         }
     }
