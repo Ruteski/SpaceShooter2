@@ -31,4 +31,10 @@ public class InimigoPai : MonoBehaviour
             Instantiate(goExplosao, transform.position, transform.rotation);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("DestroiInimigo")) {
+            Destroy(gameObject);
+        }
+    }
 }
