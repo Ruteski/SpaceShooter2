@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7028586416597477762, guid: c8c33adfa886a3b41b91bc4e43c89077, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.1
+      value: 7.07
       objectReference: {fileID: 0}
     - target: {fileID: 7028586416597477762, guid: c8c33adfa886a3b41b91bc4e43c89077, type: 3}
       propertyPath: m_LocalPosition.z
@@ -358,6 +358,10 @@ PrefabInstance:
       propertyPath: posPlayer
       value: 
       objectReference: {fileID: 747367425}
+    - target: {fileID: 7028586416597477775, guid: c8c33adfa886a3b41b91bc4e43c89077, type: 3}
+      propertyPath: velocidadeTiro
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c33adfa886a3b41b91bc4e43c89077, type: 3}
 --- !u!1001 &9130315773430167358

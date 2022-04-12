@@ -7,6 +7,9 @@ public class Inimigo02Controller : InimigoPai
     private Rigidbody2D meuRB;
 
     [SerializeField] private Transform posTiro;
+    [SerializeField] private float yMax = 2.8f;
+
+    private bool mudouDirecao = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,18 @@ public class Inimigo02Controller : InimigoPai
 
     // Update is called once per frame
     void Update() {
+
+        if (transform.position.y <= yMax && !mudouDirecao) {
+            if (transform.position.x > 0f) {
+                meuRB.velocity = new Vector2(velocidade, velocidade);
+                mudouDirecao = true;
+            }else {
+                // vai para a direita
+                meuRB.velocity = new Vector2(velocidade * -1, velocidade);
+                mudouDirecao = true;
+            }
+        }
+
         Atirando();
     }
 
@@ -50,8 +65,10 @@ public class Inimigo02Controller : InimigoPai
                     tiro.GetComponent<Rigidbody2D>().velocity = direcao * -velocidadeTiro;
 
                     //dando o angulo que o tiro tem que estar(a conta do angulo é padrao)
-                    float angulo = Mathf.Atan2(direcao.y, direcao.x);// retorna o valor em radiano
-                    angulo = angulo * Mathf.Rad2Deg; // converte radianos em graus
+                    /*float angulo = Mathf.Atan2(direcao.y, direcao.x);// retorna o valor em radiano
+                    angulo = angulo * Mathf.Rad2Deg; // converte radianos em graus*/
+
+                    float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
                 
                     //passando o angulo para o a sprite do tiro
                     tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f); 
