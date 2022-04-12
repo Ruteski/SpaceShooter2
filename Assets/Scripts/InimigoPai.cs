@@ -7,6 +7,8 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected float velocidade;
     [SerializeField] protected int vida;
     [SerializeField] protected GameObject goExplosao;
+    [SerializeField] protected GameObject goTiro;//meu tiro
+    protected float esperaTiro = 1f;
 
     // Start is called before the first frame update
     void Start()

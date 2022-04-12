@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform posTiro;
     [SerializeField] private int vida = 3;
     [SerializeField] private GameObject goExplosao;
+    [SerializeField] private float velcidadeTiro = 6f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,13 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        Movendo();
+
+        Atirando();
+    }
+
+    private void Movendo() {
         //pegando o input horizontal
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -30,9 +36,15 @@ public class PlayerController : MonoBehaviour
 
         //passando a minha velocidade para o rb
         meuRB.velocity = minhaVelocidade * velocidade;
+    }
 
-        if (Input.GetButtonDown("Fire1")) Instantiate(goTiro, posTiro.position, transform.rotation);
-        
+    private void Atirando() {
+        if (Input.GetButtonDown("Fire1")) {
+            GameObject tiro = Instantiate(goTiro, posTiro.position, transform.rotation);
+
+            //dar direcao e velocidade para o rb do tiro
+            tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velcidadeTiro);
+        }
     }
 
     public void PerdeVida(int dano) {

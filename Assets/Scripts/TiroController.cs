@@ -13,8 +13,7 @@ public class TiroController : MonoBehaviour
     void Start()
     {
         meuRB = GetComponent<Rigidbody2D>();
-
-        meuRB.velocity = new Vector2(0f, velocidade);
+        //meuRB.velocity = new Vector2(0f, velocidade);
     }
 
     // Update is called once per frame

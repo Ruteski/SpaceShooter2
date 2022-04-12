@@ -5,10 +5,6 @@ using UnityEngine;
 public class InimigoController : InimigoPai
 {
     private Rigidbody2D meuRB;
-    private float esperaTiro = 1f;
-
-    //meu tiro
-    [SerializeField] private GameObject goTiro;
 
     //pegando o transforme da posicao do meu tiro
     [SerializeField] private Transform posTiro;
@@ -24,8 +20,11 @@ public class InimigoController : InimigoPai
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        Atirando();
+    }
+
+    private void Atirando() {
         //checa se o sprite renderer esta visivel
         //pegando informação dos filhos
         bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
