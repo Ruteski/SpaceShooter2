@@ -30,32 +30,34 @@ public class Inimigo02Controller : InimigoPai
         bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
 
         if (visivel) {
-            //diminui tempo de espera para atirar
-            esperaTiro -= Time.deltaTime;
+            // encontrando o player na cena
+            var player = FindObjectOfType<PlayerController>();
 
-            if (esperaTiro < 0f) {
-                //instanciando o tiro
-                GameObject tiro = Instantiate(goTiro, posTiro.position, transform.rotation);
+            if (player) {
+                //diminui tempo de espera para atirar
+                esperaTiro -= Time.deltaTime;
 
-                // encontrando o player na cena
-                var player = FindObjectOfType<PlayerController>();
+                if (esperaTiro < 0f) {
+                    //instanciando o tiro
+                    GameObject tiro = Instantiate(goTiro, posTiro.position, transform.rotation);
 
-                // encontrando a direcao do player
-                Vector2 direcao = player.transform.position - tiro.transform.position;
+                    // encontrando a direcao do player
+                    Vector2 direcao = player.transform.position - tiro.transform.position;
 
-                //normalizando a velocidade dele
-                direcao.Normalize();
+                    //normalizando a velocidade dele
+                    direcao.Normalize();
 
-                tiro.GetComponent<Rigidbody2D>().velocity = direcao * -velocidadeTiro;
+                    tiro.GetComponent<Rigidbody2D>().velocity = direcao * -velocidadeTiro;
 
-                //dando o angulo que o tiro tem que estar(a conta do angulo é padrao)
-                float angulo = Mathf.Atan2(direcao.y, direcao.x);// retorna o valor em radiano
-                angulo = angulo * Mathf.Rad2Deg; // converte radianos em graus
+                    //dando o angulo que o tiro tem que estar(a conta do angulo é padrao)
+                    float angulo = Mathf.Atan2(direcao.y, direcao.x);// retorna o valor em radiano
+                    angulo = angulo * Mathf.Rad2Deg; // converte radianos em graus
                 
-                //passando o angulo para o a sprite do tiro
-                tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f); 
+                    //passando o angulo para o a sprite do tiro
+                    tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f); 
 
-                esperaTiro = Random.Range(2f, 4f);
+                    esperaTiro = Random.Range(2f, 4f);
+                }
             }
         }
     }
