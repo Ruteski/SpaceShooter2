@@ -8,7 +8,6 @@ public class InimigoController : InimigoPai
 
     //pegando o transforme da posicao do meu tiro
     [SerializeField] private Transform posTiro;
-    [SerializeField] private float velocidadeTiro = -5f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +36,7 @@ public class InimigoController : InimigoPai
             if (esperaTiro < 0f) {
                 //instanciando o tiro
                 GameObject tiro = Instantiate(goTiro, posTiro.position, transform.rotation);
-                tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
+                tiro.GetComponent<Rigidbody2D>().velocity = Vector2.down * velocidadeTiro;
                 esperaTiro = Random.Range(1.5f, 2f);
             }
         }

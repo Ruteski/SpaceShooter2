@@ -35,7 +35,19 @@ public class Inimigo02Controller : InimigoPai
 
             if (esperaTiro < 0f) {
                 //instanciando o tiro
-                Instantiate(goTiro, posTiro.position, transform.rotation);
+                GameObject tiro = Instantiate(goTiro, posTiro.position, transform.rotation);
+
+                // encontrando o player na cena
+                var player = FindObjectOfType<PlayerController>();
+
+                // encontrando a direcao do player
+                Vector2 direcao = player.transform.position - tiro.transform.position;
+
+                //normalizando a velocidade dele
+                direcao.Normalize();
+
+                tiro.GetComponent<Rigidbody2D>().velocity = direcao * -velocidadeTiro;
+
                 esperaTiro = Random.Range(2f, 4f);
             }
         }

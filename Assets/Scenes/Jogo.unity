@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &747367425 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4854751602155202534, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
+  m_PrefabInstance: {fileID: 4854751602745116923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &831308096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -349,6 +354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inimigo02
       objectReference: {fileID: 0}
+    - target: {fileID: 7028586416597477775, guid: c8c33adfa886a3b41b91bc4e43c89077, type: 3}
+      propertyPath: posPlayer
+      value: 
+      objectReference: {fileID: 747367425}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c33adfa886a3b41b91bc4e43c89077, type: 3}
 --- !u!1001 &9130315773430167358
