@@ -48,6 +48,13 @@ public class Inimigo02Controller : InimigoPai
 
                 tiro.GetComponent<Rigidbody2D>().velocity = direcao * -velocidadeTiro;
 
+                //dando o angulo que o tiro tem que estar(a conta do angulo é padrao)
+                float angulo = Mathf.Atan2(direcao.y, direcao.x);// retorna o valor em radiano
+                angulo = angulo * Mathf.Rad2Deg; // converte radianos em graus
+                
+                //passando o angulo para o a sprite do tiro
+                tiro.transform.rotation = Quaternion.Euler(0f, 0f, angulo + 90f); 
+
                 esperaTiro = Random.Range(2f, 4f);
             }
         }
