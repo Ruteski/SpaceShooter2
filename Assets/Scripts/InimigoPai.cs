@@ -32,9 +32,19 @@ public class InimigoPai : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("DestroiInimigo")) {
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("DestroiInimigo")) {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        //if (other.gameObject.CompareTag("Jogador")) {  // essa é outra forma de pegar a tag
+        if (other.collider.CompareTag("Jogador")) {
+            Destroy(gameObject);
+            Instantiate(goExplosao, transform.position, transform.rotation);
+
+            other.gameObject.GetComponent<PlayerController>().PerdeVida(1);
         }
     }
 }

@@ -182,8 +182,9 @@ MonoBehaviour:
   velocidade: 5
   goTiro: {fileID: 8569926094895173226, guid: a40a07425c9f99f4d9bb9a1024ded0c0, type: 3}
   posTiro: {fileID: 2119186934}
-  vida: 1
+  vida: 3
   goExplosao: {fileID: 120172034785942010, guid: f71198019348766459d767b90cf435ad, type: 3}
+  velcidadeTiro: 6
 --- !u!50 &4854751602155202532
 Rigidbody2D:
   serializedVersion: 4
