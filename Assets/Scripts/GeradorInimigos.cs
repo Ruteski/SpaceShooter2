@@ -10,8 +10,7 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private int pontos = 0;
     [SerializeField] private int baseLevel = 100;
     [SerializeField] private int qtdInimigos = 0;
-
-    private float esperaInimigo = 5f;
+    [SerializeField] private float esperaInimigo = 2f;
 
     // Update is called once per frame
     void Update()

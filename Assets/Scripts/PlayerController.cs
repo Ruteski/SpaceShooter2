@@ -11,7 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int vida = 3;
     [SerializeField] private GameObject goExplosao;
     [SerializeField] private float velcidadeTiro = 6f;
-    
+
+    [SerializeField] private float xMin = -8.3f;
+    [SerializeField] private float xMax = 8.3f;
+    [SerializeField] private float yMin = -4.4f;
+    [SerializeField] private float yMax = 4.4f;
+
     private Vector2 minhaVelocidade;
     private float horizontal;
     private float vertical;
@@ -37,6 +42,15 @@ public class PlayerController : MonoBehaviour
     private void Movendo() {
         //passando a minha velocidade para o rb
         meuRB.velocity = minhaVelocidade * velocidade;
+
+        //limitando a posicao da tela
+        //funcao Clamp
+        float meuX = Mathf.Clamp(transform.position.x, xMin, xMax);
+        float meuY = Mathf.Clamp(transform.position.y, yMin, yMax);
+
+
+        //aplicando minha posicao X
+        transform.position = new Vector3(meuX, meuY);
     }
 
     private Vector2 Direcao() {
