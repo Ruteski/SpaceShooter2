@@ -19,7 +19,7 @@ public class GeradorInimigos : MonoBehaviour
     }
 
     public void GanhaPontos(int pontos) {
-        this.pontos = pontos;
+        this.pontos += pontos;
 
         //ganhando level se os pontos forem maior que a base do level * o level
         if (this.pontos > (baseLevel * level)) {
