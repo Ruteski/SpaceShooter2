@@ -49,7 +49,7 @@ public class Inimigo02Controller : InimigoPai
         //pegando informação dos filhos
         //bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
 
-        if (gameObject.transform.position.y < 6) {
+        if (gameObject.transform.position.y < 6f) {
             // encontrando o player na cena
             var player = FindObjectOfType<PlayerController>();
 

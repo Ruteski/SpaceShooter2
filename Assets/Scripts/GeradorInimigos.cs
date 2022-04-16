@@ -7,20 +7,18 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private GameObject[] inimigos;
     [SerializeField] private float tempoEspera = 5f;
     [SerializeField] private int level = 1;
+    [SerializeField] private int pontos = 0;
 
-    private int pontos = 0;
     private float esperaInimigo = 5f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         GeraInimigos();
+    }
+
+    public void GanhaPontos(int pontos) {
+        this.pontos = pontos;
     }
 
     private void GeraInimigos() {

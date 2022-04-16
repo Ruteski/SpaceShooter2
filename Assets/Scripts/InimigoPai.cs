@@ -12,12 +12,15 @@ public class InimigoPai : MonoBehaviour
     protected float esperaTiro = 1f;
 
     public void PerdeVida(int dano) {
-        if (gameObject.transform.position.y < 5){
+        if (gameObject.transform.position.y < 5f){
             vida -= dano;
 
             if (vida <= 0) {
                 Destroy(gameObject);
                 Instantiate(goExplosao, transform.position, transform.rotation);
+
+                //ganhando pontos
+                FindObjectOfType<GeradorInimigos>().GanhaPontos(10);
             }
         }
     }

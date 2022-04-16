@@ -29,7 +29,7 @@ public class InimigoController : InimigoPai
         //pegando informação dos filhos
         //bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
 
-        if (gameObject.transform.position.y < 5) {
+        if (gameObject.transform.position.y < 5f) {
             //diminui tempo de espera para atirar
             esperaTiro -= Time.deltaTime;
 
