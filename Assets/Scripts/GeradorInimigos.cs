@@ -8,6 +8,7 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private float tempoEspera = 5f;
     [SerializeField] private int level = 1;
     [SerializeField] private int pontos = 0;
+    [SerializeField] private int baseLevel = 100;
 
     private float esperaInimigo = 5f;
 
@@ -19,6 +20,11 @@ public class GeradorInimigos : MonoBehaviour
 
     public void GanhaPontos(int pontos) {
         this.pontos = pontos;
+
+        //ganhando level se os pontos forem maior que a base do level * o level
+        if (this.pontos > (baseLevel * level)) {
+            level++;
+        }
     }
 
     private void GeraInimigos() {
