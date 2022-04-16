@@ -11,24 +11,14 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected float velocidadeTiro = 5f;
     protected float esperaTiro = 1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PerdeVida(int dano) {
-        vida -= dano;
+        if (gameObject.transform.position.y < 5){
+            vida -= dano;
 
-        if (vida <= 0) {
-            Destroy(gameObject);
-            Instantiate(goExplosao, transform.position, transform.rotation);
+            if (vida <= 0) {
+                Destroy(gameObject);
+                Instantiate(goExplosao, transform.position, transform.rotation);
+            }
         }
     }
 

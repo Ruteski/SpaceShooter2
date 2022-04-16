@@ -27,9 +27,9 @@ public class InimigoController : InimigoPai
     private void Atirando() {
         //checa se o sprite renderer esta visivel
         //pegando informação dos filhos
-        bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
+        //bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
 
-        if (visivel) {
+        if (gameObject.transform.position.y < 5) {
             //diminui tempo de espera para atirar
             esperaTiro -= Time.deltaTime;
 

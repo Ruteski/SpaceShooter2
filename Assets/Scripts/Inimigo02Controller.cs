@@ -47,9 +47,9 @@ public class Inimigo02Controller : InimigoPai
     private void Atirando() {
         //checa se o sprite renderer esta visivel
         //pegando informação dos filhos
-        bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
+        //bool visivel = GetComponentInChildren<SpriteRenderer>().isVisible;
 
-        if (visivel) {
+        if (gameObject.transform.position.y < 6) {
             // encontrando o player na cena
             var player = FindObjectOfType<PlayerController>();
 
