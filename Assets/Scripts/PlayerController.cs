@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int vida = 3;
     [SerializeField] private GameObject goExplosao;
     [SerializeField] private float velcidadeTiro = 6f;
+    [SerializeField] private int levelTiro = 1;
 
     [SerializeField] private float xLimite = 8.3f;
     [SerializeField] private float yLimite = 4.4f;
