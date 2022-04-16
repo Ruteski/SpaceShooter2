@@ -415,6 +415,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2119186933, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
       propertyPath: xMax
       value: 8.3
@@ -430,6 +434,14 @@ PrefabInstance:
     - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
       propertyPath: yMin
       value: -4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
+      propertyPath: goTiro2
+      value: 
+      objectReference: {fileID: 980795540225621413, guid: fc3619f2ab05d4d45a150bf8b96ab1cb, type: 3}
+    - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
+      propertyPath: levelTiro
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
       propertyPath: velocidade

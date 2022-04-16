@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D meuRB;
     [SerializeField] private float velocidade = 5f;
     [SerializeField] private GameObject goTiro;
+    [SerializeField] private GameObject goTiro2;
     [SerializeField] private Transform posTiro;
     [SerializeField] private int vida = 3;
     [SerializeField] private GameObject goExplosao;
@@ -64,11 +65,35 @@ public class PlayerController : MonoBehaviour
 
     private void Atirando() {
         if (Input.GetButtonDown("Fire1")) {
-            GameObject tiro = Instantiate(goTiro, posTiro.position, transform.rotation);
+            switch (levelTiro) {
+                case 1:
+                    CriaTiro(goTiro, posTiro.position);
+                    break;
+                case 2:
+                    Vector3 posicao = new Vector3(posTiro.position.x - 0.45f, posTiro.position.y + 0.1f);
+                    CriaTiro(goTiro2, posicao);
 
-            //dar direcao e velocidade para o rb do tiro
-            tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velcidadeTiro);
+                    posicao = new Vector3(posTiro.position.x + 0.45f, posTiro.position.y + 0.1f);
+                    CriaTiro(goTiro2, posicao);
+                    break;
+                case 3:
+                    CriaTiro(goTiro, posTiro.position);
+                    
+                    posicao = new Vector3(posTiro.position.x - 0.45f, posTiro.position.y + 0.1f);
+                    CriaTiro(goTiro2, posicao);
+
+                    posicao = new Vector3(posTiro.position.x + 0.45f, posTiro.position.y + 0.1f);
+                    CriaTiro(goTiro2, posicao);
+                    break;
+            }
         }
+    }
+
+    private void CriaTiro(GameObject tiroCriado, Vector3 posicao) {
+        GameObject tiro = Instantiate(tiroCriado, posicao, transform.rotation);
+
+        //dar direcao e velocidade para o rb do tiro
+        tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velcidadeTiro);
     }
 
     public void PerdeVida(int dano) {
