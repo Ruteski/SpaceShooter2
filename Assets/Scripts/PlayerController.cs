@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int vida = 3;
     [SerializeField] private GameObject goExplosao;
     [SerializeField] private float velcidadeTiro = 6f;
+    
+    private Vector2 minhaVelocidade;
+    private float horizontal;
+    private float vertical;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,22 +25,29 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        Movendo();
+        minhaVelocidade = Direcao();
 
         Atirando();
     }
 
+    private void FixedUpdate() {
+        Movendo();
+    }
+
     private void Movendo() {
+        //passando a minha velocidade para o rb
+        meuRB.velocity = minhaVelocidade * velocidade;
+    }
+
+    private Vector2 Direcao() {
         //pegando o input horizontal
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
         Vector2 minhaVelocidade = new Vector2(horizontal, vertical);
 
         //normalizando para que a velocidade diagonal seja a msm da velocidade nos eixos
         minhaVelocidade.Normalize();
-
-        //passando a minha velocidade para o rb
-        meuRB.velocity = minhaVelocidade * velocidade;
+        return minhaVelocidade;
     }
 
     private void Atirando() {

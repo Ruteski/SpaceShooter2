@@ -24,19 +24,24 @@ public class Inimigo02Controller : InimigoPai
 
     // Update is called once per frame
     void Update() {
+        Atirando();
+    }
 
+    private void FixedUpdate() {
+        Movendo();
+    }
+
+    private void Movendo() {
         if (transform.position.y <= yMax && !mudouDirecao) {
             if (transform.position.x > 0f) {
                 meuRB.velocity = new Vector2(velocidade, velocidade);
                 mudouDirecao = true;
-            }else {
+            } else {
                 // vai para a direita
                 meuRB.velocity = new Vector2(velocidade * -1, velocidade);
                 mudouDirecao = true;
             }
         }
-
-        Atirando();
     }
 
     private void Atirando() {
