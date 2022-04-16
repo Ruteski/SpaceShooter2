@@ -32,6 +32,15 @@ public class GeradorInimigos : MonoBehaviour
         qtdInimigos--;
     }
 
+    //metodo para checar se a posica esta liver
+    private Collider2D ChecaPosicao(Vector3 posicao, Vector3 size) {
+        //checando se na posicao passada existe algum colider2d
+        Collider2D hit = Physics2D.OverlapBox(posicao, size, 0f);
+
+        //se o hit é null nao houve colisao
+        return hit;
+    }
+
     private void GeraInimigos() {
         if (esperaInimigo > 0) {
             esperaInimigo -= Time.deltaTime;
@@ -40,8 +49,16 @@ public class GeradorInimigos : MonoBehaviour
         if (esperaInimigo <= 0f && qtdInimigos <= 0) {
             //criando varios inimigos por vez
             int quantidade = level * 4;
+            int tentativas = 0;
+
 
             while (qtdInimigos < quantidade) {
+                tentativas++;
+
+                if (tentativas >= 200) {
+                    break;
+                }
+
                 GameObject inimigoCriado;
 
                 //descidindo qual inimigo vai ser criado com base no level
@@ -54,11 +71,32 @@ public class GeradorInimigos : MonoBehaviour
                 }
 
                 Vector3 posicao = new Vector3(Random.Range(-8f, 9f), Random.Range(6f, 17f), 0f);
-                Instantiate(inimigoCriado, posicao, transform.rotation);
-                
-                qtdInimigos++;
 
-                esperaInimigo = tempoEspera;
+                //checo se a posicao esta livre
+                if (ChecaPosicao(posicao, inimigoCriado.transform.localScale) == null) {
+                    Instantiate(inimigoCriado, posicao, transform.rotation);
+                    qtdInimigos++;
+                    esperaInimigo = tempoEspera;
+                } else {
+                    bool criou = false;
+
+                    while (!criou) {
+                        posicao = new Vector3(Random.Range(-8f, 9f), Random.Range(6f, 17f), 0f);
+
+                        if (ChecaPosicao(posicao, inimigoCriado.transform.localScale) == null) {
+                            criou = true;
+
+                            Instantiate(inimigoCriado, posicao, transform.rotation);
+                            qtdInimigos++;
+                            esperaInimigo = tempoEspera;
+                        } else {
+                            tentativas++;
+                            if (tentativas >= 200) {
+                                break;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

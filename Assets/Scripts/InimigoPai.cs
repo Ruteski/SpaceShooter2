@@ -14,6 +14,12 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected GameObject goPowerUp;
     [SerializeField] protected float itemRate = 0.9f;
 
+    private GeradorInimigos gerador;
+
+    private void Start() {
+        gerador = FindObjectOfType<GeradorInimigos>();
+    }
+
     public void PerdeVida(int dano) {
         if (gameObject.transform.position.y < 5f){
             vida -= dano;
@@ -22,13 +28,16 @@ public class InimigoPai : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(goExplosao, transform.position, transform.rotation);
 
-                //ganhando pontos
-                var gerador = FindObjectOfType<GeradorInimigos>();
-                gerador.DiminuiQuantidade();
                 gerador.GanhaPontos(pontos);
-
                 DropaItem();
             }
+        }
+    }
+
+    //evento de quando é destruido
+    private void OnDestroy() {
+        if (gerador) {
+            gerador.DiminuiQuantidade();
         }
     }
 
@@ -48,9 +57,6 @@ public class InimigoPai : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("DestroiInimigo")) {
             Destroy(gameObject);
-
-            var gerador = FindObjectOfType<GeradorInimigos>();
-            gerador.DiminuiQuantidade();
         }
     }
 
@@ -58,12 +64,7 @@ public class InimigoPai : MonoBehaviour
         //if (other.gameObject.CompareTag("Jogador")) {  // essa é outra forma de pegar a tag
         if (other.collider.CompareTag("Jogador")) {
             Destroy(gameObject);
-
-            var gerador = FindObjectOfType<GeradorInimigos>();
-            gerador.DiminuiQuantidade();
-
             Instantiate(goExplosao, transform.position, transform.rotation);
-
             other.gameObject.GetComponent<PlayerController>().PerdeVida(1);
         }
     }
