@@ -104,4 +104,16 @@ public class PlayerController : MonoBehaviour
             Instantiate(goExplosao, transform.position, transform.rotation);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        GameObject go = collision.gameObject;
+
+        if (go.CompareTag("PowerUp")) {
+            if (levelTiro < 3) {
+                levelTiro++;
+            }
+
+            Destroy(go);
+        }
+    }
 }

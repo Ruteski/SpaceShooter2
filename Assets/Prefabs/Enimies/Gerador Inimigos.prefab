@@ -49,4 +49,6 @@ MonoBehaviour:
   tempoEspera: 5
   level: 1
   pontos: 0
-  baseLevel: 10
+  baseLevel: 100
+  qtdInimigos: 0
+  esperaInimigo: 5

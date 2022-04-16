@@ -208,6 +208,8 @@ MonoBehaviour:
   velocidadeTiro: 4
   pontos: 10
   esperaTiro: 2
+  goPowerUp: {fileID: 5104183286134408810, guid: 2f1b9a5c344b38c44a7bda1f3b8ed298, type: 3}
+  itemRate: 0.95
   posTiro: {fileID: 692340727}
 --- !u!212 &884827455370685850
 SpriteRenderer:
