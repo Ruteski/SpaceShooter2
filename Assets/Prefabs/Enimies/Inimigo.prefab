@@ -201,11 +201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255a2d86c3ffabb4a9855336e5648242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: -3
+  velocidade: -1.5
   vida: 1
   goExplosao: {fileID: 120172034785942010, guid: f71198019348766459d767b90cf435ad, type: 3}
   goTiro: {fileID: 8991771201279983115, guid: a8231949dd863a747ae4020c729edf31, type: 3}
-  velocidadeTiro: 5
+  velocidadeTiro: 4
+  pontos: 10
+  esperaTiro: 2
   posTiro: {fileID: 692340727}
 --- !u!212 &884827455370685850
 SpriteRenderer:

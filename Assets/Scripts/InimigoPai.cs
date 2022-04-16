@@ -9,7 +9,8 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected GameObject goExplosao;
     [SerializeField] protected GameObject goTiro;//meu tiro
     [SerializeField] protected float velocidadeTiro = 5f;
-    protected float esperaTiro = 1f;
+    [SerializeField] protected int pontos = 10;
+    [SerializeField] protected float esperaTiro = 1f;
 
     public void PerdeVida(int dano) {
         if (gameObject.transform.position.y < 5f){
@@ -20,7 +21,7 @@ public class InimigoPai : MonoBehaviour
                 Instantiate(goExplosao, transform.position, transform.rotation);
 
                 //ganhando pontos
-                FindObjectOfType<GeradorInimigos>().GanhaPontos(10);
+                FindObjectOfType<GeradorInimigos>().GanhaPontos(pontos);
             }
         }
     }

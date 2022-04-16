@@ -216,10 +216,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51565f38d8792bd419fdfb6ce4628996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: -3
+  velocidade: -1
   vida: 1
   goExplosao: {fileID: 120172034785942010, guid: f71198019348766459d767b90cf435ad, type: 3}
   goTiro: {fileID: 611590862295325526, guid: daa11301cce41e842b3c1f2beb700c0b, type: 3}
-  velocidadeTiro: -5
+  velocidadeTiro: -3
+  pontos: 25
+  esperaTiro: 3
   posTiro: {fileID: 981592623}
   yMax: 2.8
