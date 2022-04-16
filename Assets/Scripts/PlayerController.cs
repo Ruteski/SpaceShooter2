@@ -12,10 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject goExplosao;
     [SerializeField] private float velcidadeTiro = 6f;
 
-    [SerializeField] private float xMin = -8.3f;
-    [SerializeField] private float xMax = 8.3f;
-    [SerializeField] private float yMin = -4.4f;
-    [SerializeField] private float yMax = 4.4f;
+    [SerializeField] private float xLimite = 8.3f;
+    [SerializeField] private float yLimite = 4.4f;
 
     private Vector2 minhaVelocidade;
     private float horizontal;
@@ -45,9 +43,8 @@ public class PlayerController : MonoBehaviour
 
         //limitando a posicao da tela
         //funcao Clamp
-        float meuX = Mathf.Clamp(transform.position.x, xMin, xMax);
-        float meuY = Mathf.Clamp(transform.position.y, yMin, yMax);
-
+        float meuX = Mathf.Clamp(transform.position.x, -xLimite, xLimite);
+        float meuY = Mathf.Clamp(transform.position.y, -yLimite, yLimite);
 
         //aplicando minha posicao X
         transform.position = new Vector3(meuX, meuY);
