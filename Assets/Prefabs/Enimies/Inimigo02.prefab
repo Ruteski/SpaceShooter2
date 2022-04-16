@@ -217,13 +217,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: -1
-  vida: 1
+  vida: 3
   goExplosao: {fileID: 120172034785942010, guid: f71198019348766459d767b90cf435ad, type: 3}
   goTiro: {fileID: 611590862295325526, guid: daa11301cce41e842b3c1f2beb700c0b, type: 3}
   velocidadeTiro: -3
   pontos: 25
   esperaTiro: 3
   goPowerUp: {fileID: 5104183286134408810, guid: 2f1b9a5c344b38c44a7bda1f3b8ed298, type: 3}
-  itemRate: 0.8
+  itemRate: 0.97
   posTiro: {fileID: 981592623}
   yMax: 2.8

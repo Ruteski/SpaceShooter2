@@ -12,7 +12,7 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected int pontos = 10;
     [SerializeField] protected float esperaTiro = 1f;
     [SerializeField] protected GameObject goPowerUp;
-    [SerializeField] protected float itemRate = 0.9f;
+    [SerializeField] protected float itemRate = 0.99f;
 
     private GeradorInimigos gerador;
 

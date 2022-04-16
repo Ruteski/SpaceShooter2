@@ -202,14 +202,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: -1.5
-  vida: 1
+  vida: 2
   goExplosao: {fileID: 120172034785942010, guid: f71198019348766459d767b90cf435ad, type: 3}
   goTiro: {fileID: 8991771201279983115, guid: a8231949dd863a747ae4020c729edf31, type: 3}
   velocidadeTiro: 4
   pontos: 10
   esperaTiro: 2
   goPowerUp: {fileID: 5104183286134408810, guid: 2f1b9a5c344b38c44a7bda1f3b8ed298, type: 3}
-  itemRate: 0.95
+  itemRate: 0.99
   posTiro: {fileID: 692340727}
 --- !u!212 &884827455370685850
 SpriteRenderer:

@@ -417,6 +417,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
       propertyPath: vida
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
+      propertyPath: levelTiro
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4854751602155202534, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
@@ -526,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693317873179737563, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
       propertyPath: level
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
