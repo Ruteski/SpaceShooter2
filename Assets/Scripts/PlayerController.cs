@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject goExplosao;
     [SerializeField] private float velcidadeTiro = 6f;
     [SerializeField] private int levelTiro = 1;
+    [SerializeField] private GameObject goEscudo;
 
     [SerializeField] private float xLimite = 8.3f;
     [SerializeField] private float yLimite = 4.4f;
@@ -20,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 minhaVelocidade;
     private float horizontal;
     private float vertical;
+    private GameObject escudoAtual;
+    private readonly float escudoTimer = 6.2f;
+    private int totalEscudo = 3;
     
 
     // Start is called before the first frame update
@@ -33,6 +37,7 @@ public class PlayerController : MonoBehaviour
         minhaVelocidade = Direcao();
 
         Atirando();
+        Escudo();
     }
 
     private void FixedUpdate() {
@@ -61,6 +66,20 @@ public class PlayerController : MonoBehaviour
         //normalizando para que a velocidade diagonal seja a msm da velocidade nos eixos
         minhaVelocidade.Normalize();
         return minhaVelocidade;
+    }
+
+    private void Escudo() {
+        if (Input.GetButtonDown("Shield") && !escudoAtual && totalEscudo > 0) {
+            escudoAtual = Instantiate(goEscudo, transform.position, transform.rotation);
+            Destroy(escudoAtual, escudoTimer);
+
+            totalEscudo--;
+        }
+
+        if (escudoAtual) {
+            escudoAtual.transform.position = transform.position;
+        }
+        
     }
 
     private void Atirando() {
