@@ -14,6 +14,10 @@ public class TiroController : MonoBehaviour
         //meuRB.velocity = new Vector2(0f, velocidade);
     }
 
+    private void Update() {
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Inimigo")) {
             collision.GetComponent<InimigoPai>().PerdeVida(1);

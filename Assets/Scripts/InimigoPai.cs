@@ -14,12 +14,6 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected GameObject goPowerUp;
     [SerializeField] protected float itemRate = 0.99f;
 
-    private GeradorInimigos gerador;
-
-    private void Start() {
-        gerador = FindObjectOfType<GeradorInimigos>();
-    }
-
     public void PerdeVida(int dano) {
         if (gameObject.transform.position.y < 5f){
             vida -= dano;
@@ -28,6 +22,7 @@ public class InimigoPai : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(goExplosao, transform.position, transform.rotation);
 
+                var gerador = FindObjectOfType<GeradorInimigos>();
                 gerador.GanhaPontos(pontos);
                 DropaItem();
             }
@@ -36,6 +31,8 @@ public class InimigoPai : MonoBehaviour
 
     //evento de quando é destruido
     private void OnDestroy() {
+        var gerador = FindObjectOfType<GeradorInimigos>();
+
         if (gerador) {
             gerador.DiminuiQuantidade();
         }
