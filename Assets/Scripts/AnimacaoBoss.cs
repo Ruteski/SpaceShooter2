@@ -6,7 +6,7 @@ public class AnimacaoBoss : MonoBehaviour
 {
     [SerializeField] private GameObject boss;
 
-    public void CriaBoss() {
+    private void OnDestroy() {
         Instantiate(boss, transform.position, transform.rotation);
     }
 }
