@@ -488,6 +488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gerador Inimigos
       objectReference: {fileID: 0}
+    - target: {fileID: 5693317873179737560, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5693317873179737562, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -534,8 +538,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5693317873179737563, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
       propertyPath: level
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693317873179737563, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
+      propertyPath: pontos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5693317873179737563, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
+      propertyPath: baseLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693317873179737563, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
+      propertyPath: bossAnimation
+      value: 
+      objectReference: {fileID: 8317142918624577824, guid: 5f550a678bcc98547badf6db56d82834, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
 --- !u!1001 &9130315773430167358

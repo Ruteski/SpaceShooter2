@@ -5,17 +5,36 @@ using UnityEngine;
 public class GeradorInimigos : MonoBehaviour
 {
     [SerializeField] private GameObject[] inimigos;
-    [SerializeField] private float tempoEspera = 5f;
+    [SerializeField] private float tempoEspera = 2f;
     [SerializeField] private int level = 1;
     [SerializeField] private int pontos = 0;
     [SerializeField] private int baseLevel = 100;
     [SerializeField] private int qtdInimigos = 0;
     [SerializeField] private float esperaInimigo = 2f;
+    [SerializeField] private GameObject bossAnimation;
+
+    private bool animacaoBoss = false;
 
     // Update is called once per frame
     void Update()
     {
-        GeraInimigos();
+        if (level < 10) { 
+            GeraInimigos();
+        } else if (qtdInimigos <= 0 && tempoEspera > 0){
+            tempoEspera -= Time.deltaTime;
+
+            if (tempoEspera <= 0f){
+                GeraBoss();
+            }
+        }
+    }
+
+    private void GeraBoss() {
+        if (!animacaoBoss) {
+            GameObject anim = Instantiate(bossAnimation, Vector3.zero, transform.rotation);
+            Destroy(anim, 6.3f);
+            animacaoBoss = true;
+        }
     }
 
     public void GanhaPontos(int pontos) {
