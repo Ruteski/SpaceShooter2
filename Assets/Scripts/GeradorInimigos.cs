@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GeradorInimigos : MonoBehaviour
 {
@@ -12,8 +11,13 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private int qtdInimigos = 0;
     [SerializeField] private float esperaInimigo = 2f;
     [SerializeField] private GameObject bossAnimation;
+    [SerializeField] private Text textoPontuacao;
 
     private bool animacaoBoss = false;
+
+    private void Start() {
+        textoPontuacao.text = pontos.ToString();
+    }
 
     // Update is called once per frame
     void Update()
@@ -39,6 +43,7 @@ public class GeradorInimigos : MonoBehaviour
 
     public void GanhaPontos(int pontos) {
         this.pontos += pontos;
+        textoPontuacao.text = this.pontos.ToString();
 
         //ganhando level se os pontos forem maior que a base do level * o level
         if (this.pontos > (baseLevel * level)) {
