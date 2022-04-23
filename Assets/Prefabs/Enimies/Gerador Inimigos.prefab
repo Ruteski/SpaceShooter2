@@ -47,10 +47,10 @@ MonoBehaviour:
   - {fileID: 884827455370685830, guid: c834ad7ef523095439ca22946216c2c1, type: 3}
   - {fileID: 7028586416597477763, guid: c8c33adfa886a3b41b91bc4e43c89077, type: 3}
   tempoEspera: 5
-  level: 9
+  level: 1
   pontos: 1
   baseLevel: 1
   qtdInimigos: 0
-  esperaInimigo: 5
+  esperaInimigo: 0
   bossAnimation: {fileID: 8317142918624577824, guid: 5f550a678bcc98547badf6db56d82834, type: 3}
   textoPontuacao: {fileID: 0}
