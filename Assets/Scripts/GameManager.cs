@@ -3,10 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
-    void Update()
-    {
-        
+    private void Awake() {
+        // nao serei destruido ao mudar de cena
+        DontDestroyOnLoad(gameObject);    
     }
 
     public void IniciaJogo() {
