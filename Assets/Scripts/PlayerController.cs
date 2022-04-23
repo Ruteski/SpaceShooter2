@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -126,6 +128,12 @@ public class PlayerController : MonoBehaviour
         if (vida <= 0) { 
             Destroy(gameObject);
             Instantiate(goExplosao, transform.position, transform.rotation);
+
+            var gameManager = FindObjectOfType<GameManager>();
+
+            if (gameManager) {  
+                gameManager.TelaInicio();
+            }
         }
     }
 
