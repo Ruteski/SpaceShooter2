@@ -390,6 +390,7 @@ MonoBehaviour:
   esperaTiro: 1
   goPowerUp: {fileID: 0}
   itemRate: 0.99
+  somTiro: {fileID: 8300000, guid: 1189af5eaefc9834aa9195be694e91ae, type: 3}
   estado: estado1
   estados:
   - estado1

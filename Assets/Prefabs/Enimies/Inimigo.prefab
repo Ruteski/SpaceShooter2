@@ -210,6 +210,7 @@ MonoBehaviour:
   esperaTiro: 2
   goPowerUp: {fileID: 5104183286134408810, guid: 2f1b9a5c344b38c44a7bda1f3b8ed298, type: 3}
   itemRate: 0.99
+  somTiro: {fileID: 8300000, guid: 1189af5eaefc9834aa9195be694e91ae, type: 3}
   posTiro: {fileID: 692340727}
 --- !u!212 &884827455370685850
 SpriteRenderer:

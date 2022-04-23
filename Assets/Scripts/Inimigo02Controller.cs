@@ -58,6 +58,8 @@ public class Inimigo02Controller : InimigoPai
                 esperaTiro -= Time.deltaTime;
 
                 if (esperaTiro < 0f) {
+                    SomTiro();
+
                     //instanciando o tiro
                     GameObject tiro = Instantiate(goTiro, posTiro.position, transform.rotation);
 

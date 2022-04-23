@@ -13,6 +13,7 @@ public class InimigoPai : MonoBehaviour
     [SerializeField] protected float esperaTiro = 1f;
     [SerializeField] protected GameObject goPowerUp;
     [SerializeField] protected float itemRate = 0.99f;
+    [SerializeField] protected AudioClip somTiro;
 
     public void PerdeVida(int dano) {
         if (gameObject.transform.position.y < 5f){
@@ -71,5 +72,9 @@ public class InimigoPai : MonoBehaviour
             Instantiate(goExplosao, transform.position, transform.rotation);
             other.gameObject.GetComponent<PlayerController>().PerdeVida(1);
         }
+    }
+
+    protected void SomTiro() {
+        AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
     }
 }

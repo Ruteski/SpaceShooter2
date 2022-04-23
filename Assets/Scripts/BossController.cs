@@ -86,6 +86,8 @@ public class BossController : InimigoPai
         esperaTiro -= Time.deltaTime;
 
         if (esperaTiro < 0f) {
+            SomTiro();
+
             GameObject tiro1 = Instantiate(goTiro, posicao1, transform.rotation);
             tiro1.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -velocidadeTiro);
 
@@ -105,6 +107,8 @@ public class BossController : InimigoPai
             esperaTiro -= Time.deltaTime;
 
             if (esperaTiro < 0f) {
+                SomTiro();
+
                 //instanciando o tiro
                 GameObject tiro = Instantiate(goTiro2, posTiro2.position, transform.rotation);
 
