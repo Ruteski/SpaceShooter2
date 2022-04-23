@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int levelTiro = 1;
     [SerializeField] private GameObject goEscudo;
     [SerializeField] private Text textoVida;
+    [SerializeField] private Text textoEscudo;
 
     [SerializeField] private float xLimite = 8.3f;
     [SerializeField] private float yLimite = 4.4f;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         meuRB = GetComponent<Rigidbody2D>();
         textoVida.text = vida.ToString();
+        textoEscudo.text = totalEscudo.ToString();
     }
 
     // Update is called once per frame
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
             Destroy(escudoAtual, escudoTimer);
 
             totalEscudo--;
+            textoEscudo.text = totalEscudo.ToString();
         }
 
         if (escudoAtual) {
