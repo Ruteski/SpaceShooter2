@@ -42,12 +42,15 @@ public class GeradorInimigos : MonoBehaviour
     }
 
     public void GanhaPontos(int pontos) {
-        this.pontos += pontos;
+        this.pontos += pontos * level;
         textoPontuacao.text = this.pontos.ToString();
 
         //ganhando level se os pontos forem maior que a base do level * o level
-        if (this.pontos > (baseLevel * level)) {
+        if (this.pontos > baseLevel) {
             level++;
+
+            //dobrando a quantidade de pontos necessarios para o proximo level
+            baseLevel *= 2;
         }
     }
 
