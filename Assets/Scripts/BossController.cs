@@ -34,7 +34,8 @@ public class BossController : InimigoPai
     // Update is called once per frame
     void Update()
     {
-        
+
+        AumentaDificuldade();
         TrocaEstado();
 
         switch (estado) {
@@ -57,6 +58,14 @@ public class BossController : InimigoPai
         ////muda a cor da barra ao perder vida
         //converte o valor do full amount para alguma coisa entre 0e 255
         //barraVida.color = new Color32(190, (byte)(barraVida.fillAmount * 255), 54, 255);
+    }
+
+    private void AumentaDificuldade() {
+        if (vida <= (vidaMaxima/3)) {
+            delayTiro = 0.7f;
+        } else if (vida <= (vidaMaxima/2)) {
+            delayTiro = 0.9f;
+        }
     }
 
     private void Estado2() {
