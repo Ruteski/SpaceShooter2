@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimacaoBoss : MonoBehaviour
@@ -8,5 +6,15 @@ public class AnimacaoBoss : MonoBehaviour
 
     private void OnDestroy() {
         Instantiate(boss, transform.position, transform.rotation);
+    }
+
+    public void MorreBoss() {
+        print("caralha");
+
+        var gameManager = FindObjectOfType<GameManager>();
+
+        if (gameManager) {
+            gameManager.TelaInicio(); 
+        }
     }
 }

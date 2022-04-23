@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BossController : InimigoPai
 {
@@ -29,6 +31,11 @@ public class BossController : InimigoPai
 
         // vida inicial
         vida = vidaMaxima;
+
+        //avisando para o meu canvas que a camera dele é a camera atual do jogo
+        //pegando o canvas do boss - aviasndo qual é a camera
+        //passando a camera do jogo
+        //GetComponentInChildren<Canvas>().worldCamera = Camera.main;
     }
 
     // Update is called once per frame
