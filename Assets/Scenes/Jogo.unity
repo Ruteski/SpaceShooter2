@@ -588,6 +588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gerador Inimigos
       objectReference: {fileID: 0}
+    - target: {fileID: 5693317873179737560, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5693317873179737562, guid: 83f6af0c80654f54c825299fd7f52974, type: 3}
       propertyPath: m_RootOrder
       value: 6

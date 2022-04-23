@@ -49,7 +49,7 @@ public class InimigoPai : MonoBehaviour
 
         if (chance > itemRate) { // 10% de chance de dropar o item
             GameObject powerUp = Instantiate(goPowerUp, transform.position, transform.rotation);
-            Destroy(powerUp, 3f);
+            Destroy(powerUp, 5.2f);
 
             //criando direcao aleatorio 
             Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
