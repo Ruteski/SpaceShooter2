@@ -397,7 +397,7 @@ MonoBehaviour:
   - estado3
   goAnimacaoMorte: {fileID: 3703557978085978072, guid: 2bef8f48b5d1b164e9f526722ec0d1e6, type: 3}
   barraVida: {fileID: 835796631}
-  vidaMaxima: 50
+  vidaMaxima: 500
   goTiro2: {fileID: 611590862295325526, guid: daa11301cce41e842b3c1f2beb700c0b, type: 3}
   posTiro: {fileID: 3617193749674750143}
   posTiro2: {fileID: 1245597547}
