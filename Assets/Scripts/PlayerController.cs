@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private float vertical;
     private GameObject escudoAtual;
     private float escudoTimer = 6.2f;
-    private int totalEscudo = 3;
+    private int totalEscudo = 5;
     
 
     // Start is called before the first frame update
