@@ -13,7 +13,10 @@ public class ExplosaoController : MonoBehaviour
         //tocando o audioclip
         // posicao da camera
         //AudioSource.PlayClipAtPoint(meuSom, new Vector3(0f,0f,-10f));
-        AudioSource.PlayClipAtPoint(meuSom, Vector3.zero);
+
+        if (transform.position.y > -5.5f) {
+            AudioSource.PlayClipAtPoint(meuSom, Vector3.zero);
+        }
     }
 
     public void Morrendo() {
