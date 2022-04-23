@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform posTiro;
     [SerializeField] private int vida = 3;
     [SerializeField] private GameObject goExplosao;
-    [SerializeField] private float velcidadeTiro = 6f;
+    [SerializeField] private float velocidadeTiro = 6f;
     [SerializeField] private int levelTiro = 1;
     [SerializeField] private GameObject goEscudo;
 
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
         GameObject tiro = Instantiate(tiroCriado, posicao, transform.rotation);
 
         //dar direcao e velocidade para o rb do tiro
-        tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velcidadeTiro);
+        tiro.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, velocidadeTiro);
     }
 
     public void PerdeVida(int dano) {

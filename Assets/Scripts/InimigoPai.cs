@@ -24,7 +24,10 @@ public class InimigoPai : MonoBehaviour
 
                 var gerador = FindObjectOfType<GeradorInimigos>();
                 gerador.GanhaPontos(pontos);
-                DropaItem();
+
+                if (goPowerUp) {
+                    DropaItem(); 
+                }
             }
         }
     }
