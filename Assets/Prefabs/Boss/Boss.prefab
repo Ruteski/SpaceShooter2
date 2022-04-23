@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 835796630}
   - component: {fileID: 835796632}
   - component: {fileID: 835796631}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1245597547}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: PosicaoTiro2
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 1584300079}
   - component: {fileID: 1584300078}
   - component: {fileID: 1584300077}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Canvas boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 1872522133}
   - component: {fileID: 1872522135}
   - component: {fileID: 1872522134}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Perdeu Vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 595844187}
   - component: {fileID: 5502098490491202605}
   - component: {fileID: 7987986905780046624}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Boss
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
