@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float velocidadeTiro = 6f;
     [SerializeField] private int levelTiro = 1;
     [SerializeField] private GameObject goEscudo;
+    [SerializeField] private Text textoVida;
 
     [SerializeField] private float xLimite = 8.3f;
     [SerializeField] private float yLimite = 4.4f;
@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        meuRB = GetComponent<Rigidbody2D>();  
+        meuRB = GetComponent<Rigidbody2D>();
+        textoVida.text = vida.ToString();
     }
 
     // Update is called once per frame
@@ -117,6 +118,7 @@ public class PlayerController : MonoBehaviour
 
     public void PerdeVida(int dano) {
         vida -= dano;
+        textoVida.text = vida.ToString();
 
         if (vida <= 0) { 
             Destroy(gameObject);

@@ -210,12 +210,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 961420912}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -533.6, y: -336}
-  m_SizeDelta: {x: 83.58, y: 47.88}
+  m_AnchoredPosition: {x: -521.1, y: -331.6}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &374352982
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 50
 --- !u!222 &374352983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -473,8 +473,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1699274531}
   - {fileID: 374352981}
+  - {fileID: 1699274531}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -632,7 +632,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 961420912}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -743,16 +743,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
       propertyPath: vida
-      value: 500
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
-      propertyPath: goEscudo
+      propertyPath: textoVida
       value: 
-      objectReference: {fileID: 8773826384038950413, guid: 78bffbfe15f588343b876a0e9f5faff9, type: 3}
-    - target: {fileID: 4854751602155202533, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
-      propertyPath: levelTiro
-      value: 3
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 374352982}
     - target: {fileID: 4854751602155202534, guid: ed9f65d9e8109124984299ccf20da749, type: 3}
       propertyPath: m_RootOrder
       value: 2
