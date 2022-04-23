@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Text textoVida;
     [SerializeField] private Text textoEscudo;
     [SerializeField] private AudioClip somTiro;
+    [SerializeField] private AudioClip somMorte;
+    [SerializeField] private AudioClip somEscudo;
+    [SerializeField] private AudioClip somEscudoFim;
 
     [SerializeField] private float xLimite = 8.3f;
     [SerializeField] private float yLimite = 4.4f;
@@ -26,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     private float vertical;
     private GameObject escudoAtual;
-    private readonly float escudoTimer = 6.2f;
+    private float escudoTimer = 6.2f;
     private int totalEscudo = 3;
     
 
@@ -76,6 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void Escudo() {
         if (Input.GetButtonDown("Shield") && !escudoAtual && totalEscudo > 0) {
+            AudioSource.PlayClipAtPoint(somEscudo, Vector3.zero);
             escudoAtual = Instantiate(goEscudo, transform.position, transform.rotation);
             Destroy(escudoAtual, escudoTimer);
 
@@ -83,7 +87,13 @@ public class PlayerController : MonoBehaviour
             textoEscudo.text = totalEscudo.ToString();
         }
 
+        //if (escudoTimer <= 0f) {
+        //    AudioSource.PlayClipAtPoint(somEscudoFim, Vector3.zero);
+        //    escudoTimer = 6.2F;
+        //}
+
         if (escudoAtual) {
+            //escudoTimer -= Time.deltaTime;
             escudoAtual.transform.position = transform.position;
         }
         
@@ -135,6 +145,7 @@ public class PlayerController : MonoBehaviour
             var gameManager = FindObjectOfType<GameManager>();
 
             if (gameManager) {
+                AudioSource.PlayClipAtPoint(somMorte, new Vector3(0f,0f,-10f));
                 gameManager.TelaInicio();
             }
         }

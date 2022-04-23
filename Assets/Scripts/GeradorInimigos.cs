@@ -12,6 +12,8 @@ public class GeradorInimigos : MonoBehaviour
     [SerializeField] private float esperaInimigo = 2f;
     [SerializeField] private GameObject bossAnimation;
     [SerializeField] private Text textoPontuacao;
+    [SerializeField] private AudioClip musicaBoss;
+    [SerializeField] private AudioSource musicaJogo;
 
     private bool animacaoBoss = false;
 
@@ -38,6 +40,12 @@ public class GeradorInimigos : MonoBehaviour
             GameObject anim = Instantiate(bossAnimation, Vector3.zero, transform.rotation);
             Destroy(anim, 6.3f);
             animacaoBoss = true;
+
+            //musicaJogo.Stop();
+            //AudioSource.PlayClipAtPoint(musicaBoss, Vector3.zero);
+
+            musicaJogo.clip = musicaBoss;
+            musicaJogo.Play();  
         }
     }
 
