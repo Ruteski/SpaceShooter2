@@ -163,7 +163,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2030571343
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1584300078
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 5
-  vida: 120
+  vida: 50
   goExplosao: {fileID: 120172034785942010, guid: f71198019348766459d767b90cf435ad, type: 3}
   goTiro: {fileID: 8991771201279983115, guid: a8231949dd863a747ae4020c729edf31, type: 3}
   velocidadeTiro: 5
@@ -397,6 +397,7 @@ MonoBehaviour:
   - estado3
   goAnimacaoMorte: {fileID: 3703557978085978072, guid: 2bef8f48b5d1b164e9f526722ec0d1e6, type: 3}
   barraVida: {fileID: 835796631}
+  vidaMaxima: 50
   goTiro2: {fileID: 611590862295325526, guid: daa11301cce41e842b3c1f2beb700c0b, type: 3}
   posTiro: {fileID: 3617193749674750143}
   posTiro2: {fileID: 1245597547}
