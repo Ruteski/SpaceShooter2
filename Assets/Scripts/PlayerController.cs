@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
             var gameManager = FindObjectOfType<GameManager>();
 
-            if (gameManager) {  
+            if (gameManager) {
                 gameManager.TelaInicio();
             }
         }

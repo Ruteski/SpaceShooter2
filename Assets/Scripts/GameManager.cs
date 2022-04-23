@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,12 +16,17 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);    
     }
 
+    IEnumerator PrimeiraCena() {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
+    }
+
     public void IniciaJogo() {
         SceneManager.LoadScene("Jogo");
     }
 
     public void TelaInicio() {
-        SceneManager.LoadScene(0);
+        StartCoroutine(PrimeiraCena());
     }
 
     public void Sair() {
