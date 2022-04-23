@@ -183,12 +183,13 @@ MonoBehaviour:
   goTiro: {fileID: 8569926094895173226, guid: a40a07425c9f99f4d9bb9a1024ded0c0, type: 3}
   goTiro2: {fileID: 980795540225621413, guid: fc3619f2ab05d4d45a150bf8b96ab1cb, type: 3}
   posTiro: {fileID: 2119186934}
-  vida: 500
+  vida: 5
   goExplosao: {fileID: 120172034785942010, guid: f71198019348766459d767b90cf435ad, type: 3}
   velocidadeTiro: 6
   levelTiro: 3
   goEscudo: {fileID: 8773826384038950413, guid: 78bffbfe15f588343b876a0e9f5faff9, type: 3}
   textoVida: {fileID: 0}
+  textoEscudo: {fileID: 0}
   xLimite: 8.3
   yLimite: 4.4
 --- !u!50 &4854751602155202532

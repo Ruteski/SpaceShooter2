@@ -1,13 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : InimigoPai
 {
+    private const int _vida = 50;
+
     [Header("Info Basicas")]
     [SerializeField] private string estado = "estado1";
     [SerializeField] private string[] estados;
     [SerializeField] private GameObject goAnimacaoMorte;
+    [SerializeField] private Image barraVida;
+    [SerializeField] private int vidaMaxima = _vida;
     private float esperaEstado = 10f;
 
     [Header("Info Tiro")]
@@ -23,6 +26,9 @@ public class BossController : InimigoPai
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+
+        // vida inicial
+        vida = vidaMaxima;
     }
 
     // Update is called once per frame
@@ -45,7 +51,12 @@ public class BossController : InimigoPai
                 Estado3();  
                 break;
         }
-        
+
+        barraVida.fillAmount = ((float)vida / (float)vidaMaxima);
+
+        ////muda a cor da barra ao perder vida
+        //converte o valor do full amount para alguma coisa entre 0e 255
+        //barraVida.color = new Color32(190, (byte)(barraVida.fillAmount * 255), 54, 255);
     }
 
     private void Estado2() {
