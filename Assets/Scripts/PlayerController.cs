@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject goEscudo;
     [SerializeField] private Text textoVida;
     [SerializeField] private Text textoEscudo;
+    [SerializeField] private AudioClip somTiro;
 
     [SerializeField] private float xLimite = 8.3f;
     [SerializeField] private float yLimite = 4.4f;
@@ -90,6 +91,8 @@ public class PlayerController : MonoBehaviour
 
     private void Atirando() {
         if (Input.GetButtonDown("Fire1")) {
+            AudioSource.PlayClipAtPoint(somTiro, Vector3.zero);
+
             switch (levelTiro) {
                 case 1:
                     CriaTiro(goTiro, posTiro.position);

@@ -190,6 +190,7 @@ MonoBehaviour:
   goEscudo: {fileID: 8773826384038950413, guid: 78bffbfe15f588343b876a0e9f5faff9, type: 3}
   textoVida: {fileID: 0}
   textoEscudo: {fileID: 0}
+  somTiro: {fileID: 8300000, guid: 1deee558296816e41a7bc2ba45b77489, type: 3}
   xLimite: 8.3
   yLimite: 4.4
 --- !u!50 &4854751602155202532
